@@ -25,6 +25,17 @@ public class tictactoe extends javax.swing.JFrame {
         playername();
     }
 
+    private void newGame(){
+        btn1.setText("");
+        btn2.setText("");
+        btn3.setText("");
+        btn4.setText("");
+        btn5.setText("");
+        btn6.setText("");
+        btn7.setText("");
+        btn8.setText("");
+        btn9.setText("");
+    }
     private void playername() {
         playerone = Sutil.mss(this, "Player-One Name : ");
         playertwo = Sutil.mss(this, "Player-two Name : ");
@@ -59,6 +70,7 @@ public class tictactoe extends javax.swing.JFrame {
     }
 
     private void tie() {
+        
         Sutil.msg(this, "TIE");
     }
 
@@ -77,6 +89,7 @@ public class tictactoe extends javax.swing.JFrame {
         if (one != "" && two != "" && three != "" && four != "" && five != "" && six != "" && seven != "" && eight != ""
                 && nine != "") {
             tie();
+            newGame();
         }
     }
 
@@ -93,52 +106,68 @@ public class tictactoe extends javax.swing.JFrame {
 
         if (one == "X" && two == "X" && three == "X") {
             xWin();
+            newGame();
         }
         if (four == "X" && five == "X" && six == "X") {
             xWin();
+            newGame();
         }
         if (seven == "X" && eight == "X" && nine == "X") {
             xWin();
+            newGame();
         }
         if (one == "X" && four == "X" && seven == "X") {
             xWin();
+            newGame();
         }
         if (two == "X" && five == "X" && eight == "X") {
             xWin();
+            newGame();
         }
         if (three == "X" && six == "X" && nine == "X") {
             xWin();
+            newGame();
         }
         if (one == "X" && five == "X" && nine == "X") {
             xWin();
+            newGame();
         }
         if (seven == "X" && five == "X" && three == "X") {
             xWin();
+            newGame();
         }
 
         if (one == "O" && two == "O" && three == "O") {
             oWin();
+            newGame();
         }
         if (four == "O" && five == "O" && six == "O") {
             oWin();
+            newGame();
         }
         if (seven == "O" && eight == "O" && nine == "O") {
             oWin();
+            newGame();
         }
         if (one == "O" && four == "O" && seven == "O") {
             oWin();
+            newGame();
         }
         if (two == "O" && five == "O" && eight == "O") {
             oWin();
+            newGame();
         }
         if (three == "O" && six == "O" && nine == "O") {
             oWin();
+            newGame();
         }
         if (one == "O" && five == "O" && nine == "O") {
             oWin();
+            newGame();
         }
         if (seven == "O" && five == "O" && three == "O") {
             xWin();
+            newGame();
         }
         else{
             determineIfTie();
@@ -288,7 +317,7 @@ public class tictactoe extends javax.swing.JFrame {
                             .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50))))
+                        .addContainerGap())))
         );
 
         lbl1.setText("...");
@@ -358,91 +387,19 @@ public class tictactoe extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbl1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lbl1)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        // TODO add your handling code here:
-        btn2.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn2ActionPerformed
-
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        // TODO add your handling code here:
-        btn1.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn1ActionPerformed
-
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        // TODO add your handling code here:
-        btn3.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn3ActionPerformed
-
-    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        // TODO add your handling code here:
-        btn4.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn4ActionPerformed
-
-    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        // TODO add your handling code here:
-        btn5.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn5ActionPerformed
-
-    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        // TODO add your handling code here:
-        btn6.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn6ActionPerformed
-
-    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        // TODO add your handling code here:
-        btn7.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn7ActionPerformed
-
-    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        // TODO add your handling code here:
-        btn8.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn8ActionPerformed
-
-    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        // TODO add your handling code here:
-        btn9.setText(player);
-        determinePlayer();
-        determineIfWin();
-//        determineIfTie();
-    }//GEN-LAST:event_btn9ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
@@ -485,6 +442,78 @@ public class tictactoe extends javax.swing.JFrame {
         score.setVisible(true);
     }//GEN-LAST:event_mniScoreActionPerformed
 
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        // TODO add your handling code here:
+        btn3.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        // TODO add your handling code here:
+        btn6.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        // TODO add your handling code here:
+        btn9.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        // TODO add your handling code here:
+        btn5.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        // TODO add your handling code here:
+        btn4.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        // TODO add your handling code here:
+        btn8.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        // TODO add your handling code here:
+        btn2.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        // TODO add your handling code here:
+        btn7.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+        btn1.setText(player);
+        determinePlayer();
+        determineIfWin();
+        //        determineIfTie();
+    }//GEN-LAST:event_btn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -521,15 +550,15 @@ public class tictactoe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btn1;
-    public javax.swing.JButton btn2;
-    public javax.swing.JButton btn3;
-    public javax.swing.JButton btn4;
-    public javax.swing.JButton btn5;
-    public javax.swing.JButton btn6;
-    public javax.swing.JButton btn7;
-    public javax.swing.JButton btn8;
-    public javax.swing.JButton btn9;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
